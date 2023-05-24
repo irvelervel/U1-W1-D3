@@ -1,8 +1,17 @@
+/* esempio di import da fonts.google.com */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
 body {
   background-color: #990000ae;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
 }
 
 /* questo selettore vince su quello indicato nel tag <head> del documento HTML! Perchè? La specificità è identica, ma semplicemente viene applicato dopo, e quindi vince l'ordine a cascata! */
 ol li {
   color: orange;
+}
+
+h1 {
+  text-align: center;
 }
