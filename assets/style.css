@@ -1,0 +1,8 @@
+body {
+  background-color: #990000ae;
+}
+
+/* questo selettore vince su quello indicato nel tag <head> del documento HTML! Perchè? La specificità è identica, ma semplicemente viene applicato dopo, e quindi vince l'ordine a cascata! */
+ol li {
+  color: orange;
+}

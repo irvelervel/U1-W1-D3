@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Basics</title>
+    <!-- 2) -->
+    <style>
+      /* regole css --> selettore { proprietà: valore } */
+      #last-li {
+        /* selettore SOLAMENTE per l'ultimo tag <li> */
+        color: purple;
+      }
+
+      .inside-ul {
+        /* seleziono TUTTI gli <li> con classe "inside-ul" */
+        color: blue;
+      }
+
+      li {
+        color: yellow;
+      }
+
+      li {
+        color: green;
+      }
+
+      /* SELETTORE DI DISCENDENZA */
+      ol li {
+        /* seleziono TUTTI gli <li> che sono figli di una <ol> */
+        color: turquoise;
+        /* però il primo <li> non diventa turchese perchè ha uno style inline */
+        /* e il terzo <li> non diventa turchese perchè ha un id che viene targhettato da una regola css che risulta più specifica */
+      }
+    </style>
+    <!-- 3) -->
+    <!-- ricordarsi di applicare il path (percorso) corretto nell'attributo href -->
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <h1>CSS Basics</h1>
+    <div>
+      <p>Scopriamo come applicare delle regole di stile a un documento HTML!</p>
+    </div>
+    <div>
+      <ol>
+        <!-- 1) -->
+        <li style="color: red; font-size: 1.2em">
+          Stile applicato inline (non usare!)
+        </li>
+        <li>
+          Stile applicato nel tag &lt;head> del documento specifico
+          (utilizzabile ma non ideale)
+        </li>
+        <li id="last-li">
+          File .css esterno importato nel documento HTML (soluzione
+          preferibile!)
+        </li>
+      </ol>
+    </div>
+    <div>
+      <p>Lista di test</p>
+      <ul>
+        <li class="inside-ul">Porcellino 1</li>
+        <li class="inside-ul">Porcellino 2</li>
+        <li class="inside-ul">Porcellino 3</li>
+        <li class="inside-ul">Lupo</li>
+      </ul>
+    </div>
+  </body>
+</html>
+
+<!-- PUNTEGGI REFERENCE DI SPECIFICITÀ -->
+<!-- tag 1 -->
+<!-- class 10 -->
+<!-- id 100 -->
+<!-- inline 1000, sconsigliato -->
