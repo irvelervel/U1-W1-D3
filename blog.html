@@ -82,6 +82,35 @@
       :not(h3) {
         /* background-color: pink; */
       }
+
+      /* primo carattere del primo <p> dopo l'elemento con class="blog-post-meta" */
+      .blog-post-meta + p::first-letter {
+        /* color: green; */
+      }
+
+      /* testo selezionato nel primo <p> dopo l'elemento con class="blog-post-meta" */
+      .blog-post-meta + p::selection {
+        color: green;
+        background-color: red;
+      }
+
+      .blog-post-title:first-of-type::before {
+        /* aggiungo un elemento in CSS prima del primo h2 con class="blog-post-title" */
+        /* content: '!'; */
+        content: '';
+        background-image: url(https://s3-eu-west-1.amazonaws.com/tpd/logos/62a6277627ee655c1226b624/0x0.png);
+        background-size: 30px 30px;
+        /* la width e la height funzionano solamente su elementi block o inline-block */
+        width: 30px;
+        height: 30px;
+        /* display: inline-block funziona come display:inline ma ci permette di settare width/height */
+        display: inline-block;
+      }
+
+      .blog-post-title:first-of-type::after {
+        /* aggiungo un elemento in CSS prima del primo h2 con class="blog-post-title" */
+        content: '?';
+      }
     </style>
   </head>
 
